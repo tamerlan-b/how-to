@@ -10,6 +10,7 @@ for gui support also needed:
 xhost +
 ```
 2. Launch docker image with flag `--cap-add PERFMON` (or `--privilleged`) and with gui support:
+
 example:  
 ```bash
 docker run --rm -it \
@@ -31,7 +32,7 @@ apt install hotspot
 ```
 if you use Ubuntu version < 20.04, then compile hotspot from source.  
 
-4. Compile your programm with debug symbols:
+4. Compile your program with debug symbols:
 For example in CMakeLists.txt add flag:  
 ```cmake
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
@@ -41,7 +42,7 @@ set(CMAKE_BUILD_TYPE RelWithDebInfo)
 ```bash
 find /usr/lib -type f -executable -name perf
 ```
-For Ubuntu 20.04 it will give: /usr/lib/linux-tools-5.4.0-200/perf
+For Ubuntu 20.04 it will give: `/usr/lib/linux-tools-5.4.0-200/perf`
 
 6. Use found path to perf with hotspot
 ```bash
